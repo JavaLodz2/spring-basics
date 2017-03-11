@@ -24,4 +24,25 @@
         <property name="priority" value="1" />
     </bean>
 
+    <bean id="user" class="pl.sda.User">
+        <property name="name" value="Jan"/>
+        <!--<property name="room" ref="roomBean"/>-->
+    </bean>
+    <bean id="roomBean" class="pl.sda.Room" >
+        <property name="roomNumber" value="27C"/>
+        <property name="roomCapacity" value="2"/>
+    </bean>
+
+    <bean id="myBean" class="pl.sda.beans.NewBean">
+        <constructor-arg>
+            <ref bean="firstBean"/>
+        </constructor-arg>
+        <constructor-arg ref="secondBean"/>
+        <constructor-arg type="int" value="1"/>
+    </bean>
+    <bean id="firstBean"
+            class="pl.sda.beans.FirstBean"/>
+    <bean id="secondBean"
+            class="pl.sda.beans.SecondBean"/>
+
 </beans>
