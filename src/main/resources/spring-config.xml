@@ -12,4 +12,16 @@
         <property name="name" value="TestName2"/>
     </bean>
 
+    <bean id="message"
+          class="pl.sda.beans.Message">
+        <property name="text" value="Hello" />
+        <property name="logins">
+            <list>
+                <value>jan.kowalski</value>
+                <value>anna.chmiel</value>
+            </list>
+        </property>
+        <property name="priority" value="1" />
+    </bean>
+
 </beans>
